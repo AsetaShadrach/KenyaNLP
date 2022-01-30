@@ -5,16 +5,11 @@ import csv
 import os
 from pandas import DataFrame
 
+access_token = ""
+access_token_secret = ""
 
-#client_key = ""
-#client_secret = ""
-
-
-access_token = "906869845958053888-TpqjV7r9ATZihNFGfVw5v5OMIRbEhDR"
-access_token_secret = "FKoLtt63BahUnhNGKA7snlHzQVXp1jsgWwF9JZmEKI628"
-
-api_key = "KHBNHJaqjR2zWKhQp6l6uBOPg"
-api_secret = "tgDESoMJp3je8x5UckTyrA1SdT0ISQoYRyqJWddL3dTRVPvxXF"
+api_key = ""
+api_secret = ""
 
 tweets_csv_file_name = "KeywordsAndReplies.csv"
 
