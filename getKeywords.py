@@ -11,7 +11,8 @@ access_token_secret = ""
 api_key = ""
 api_secret = ""
 
-tweets_csv_file_name = "KeywordsAndReplies.csv"
+keyword_ = "sipangwingwi"
+tweets_csv_file_name = f"Keyword_{keyword_}_AndReplies.csv"
 
 
 class CreateTweetsCsv():
@@ -22,13 +23,13 @@ class CreateTweetsCsv():
     def MakeCsvFile(self) -> bool:
         write_to_file = False
         if os.path.exists(self.tweets_csv_file_name):
-            print("Writing to "+self.tweets_csv_file_name+" ....")
+            print("Writing to "+self.tweets_csv_file_name+" ...")
             write_to_file=True
         else:
             with open(self.tweets_csv_file_name,"a+") as tweets_csv_file:
                 writer = csv.DictWriter(tweets_csv_file,fieldnames=["Tweet","Reply"])
                 writer.writeheader()
-                print("File created ...\nWriting to "+self.tweets_csv_file_name+" ....")
+                print("File created ...\nWriting to "+self.tweets_csv_file_name+" ...")
                 write_to_file = True
 
         return write_to_file
@@ -84,15 +85,15 @@ class CreateTweetsCsv():
 auth = tweepy.OAuthHandler(api_key,api_secret)
 auth.set_access_token(access_token, access_token_secret)
 
-api = tweepy.API(   auth, 
-                    wait_on_rate_limit=True, 
-                    wait_on_rate_limit_notify=True )
+api = tweepy.API(auth,
+                 wait_on_rate_limit=True,
+                 wait_on_rate_limit_notify=True)
 
 try:
     api.verify_credentials()
     print("twitter_KE_NLP Running")
     make_csv = CreateTweetsCsv(tweets_csv_file_name)
-    make_csv.GetTweetsAndReplies(api, kword="sipangwingwi")
+    make_csv.GetTweetsAndReplies(api, kword=keyword_)
 
 except tweepy.error.TweepError as error:
     print("Error : "+str(error))
