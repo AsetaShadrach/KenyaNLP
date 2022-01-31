@@ -11,7 +11,7 @@ access_token_secret = ""
 api_key = ""
 api_secret = ""
 
-keyword_ = "sipangwingwi"
+keyword_ = "nairobi"
 tweets_csv_file_name = f"Keyword_{keyword_}_AndReplies.csv"
 
 
