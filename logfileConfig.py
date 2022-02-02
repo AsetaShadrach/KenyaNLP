@@ -33,6 +33,7 @@ def get_last_tweet_id(file_path, logger):
         last_line = Path(file_path).read_text().splitlines()[-1]
         last_id_logged = int(last_line.split(" ")[-1])
     except Exception as e:
+        logger.error(e)
         logger.error("The last line did not contain the Tweet ID for the last entry")
 
     return last_id_logged
