@@ -4,11 +4,11 @@ import re
 import csv
 import os
 from pandas import DataFrame
+import logfileConfig
 
 
 client_key = ""
 client_secret = ""
-
 
 access_token = ""
 access_token_secret = ""
