@@ -32,3 +32,37 @@ Writing to data/TweetsAndReplies.csv ....
 03-Feb-22 00:22:58 - TweetRetreival - INFO - Writing to data/TweetsAndReplies.csv ....
 03-Feb-22 00:23:28 - TweetRetreival - INFO - Number of entries added : 22
 03-Feb-22 00:23:28 - TweetRetreival - INFO - ID of last retrieved tweet: 1488986209070170112
+03-Feb-22 00:30:28 - TweetRetreival - ERROR - [{'code': 215, 'message': 'Bad Authentication data.'}]
+Traceback (most recent call last):
+  File "c:/Users/Aseta/Desktop/D S/ML_AI/Twitter app/KenyaNLP/TweetRetreiver.py", line 33, in main
+    api.verify_credentials()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\api.py", line 605, in verify_credentials
+    )(**kargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 250, in _call
+    return method.execute()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 233, in execute
+    raise TweepError(error_msg, resp, api_code=api_error_code)
+tweepy.error.TweepError: [{'code': 215, 'message': 'Bad Authentication data.'}]
+03-Feb-22 00:32:01 - TweetRetreival - ERROR - invalid literal for int() with base 10: "data.'}]"
+03-Feb-22 00:32:01 - TweetRetreival - ERROR - The last line did not contain the Tweet ID for the last entry
+03-Feb-22 00:32:02 - TweetRetreival - INFO - Writing to data/TweetsAndReplies.csv ....
+03-Feb-22 00:32:33 - TweetRetreival - INFO - Number of entries added : 22
+03-Feb-22 00:32:33 - TweetRetreival - INFO - ID of last retrieved tweet: 1488988519666225169
+03-Feb-22 00:34:33 - TweetRetreival - ERROR - [{'code': 215, 'message': 'Bad Authentication data.'}]
+Traceback (most recent call last):
+  File "c:/Users/Aseta/Desktop/D S/ML_AI/Twitter app/KenyaNLP/TweetRetreiver.py", line 32, in main
+    api.verify_credentials()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\api.py", line 605, in verify_credentials
+    )(**kargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 250, in _call
+    return method.execute()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 233, in execute
+    raise TweepError(error_msg, resp, api_code=api_error_code)
+tweepy.error.TweepError: [{'code': 215, 'message': 'Bad Authentication data.'}]
+03-Feb-22 00:34:33 - TweetRetreival - INFO - ID of last retrieved tweet before the Error abover: 1488988519666225169
+03-Feb-22 00:35:13 - TweetRetreival - INFO - Writing to data/TweetsAndReplies.csv ....
+03-Feb-22 00:35:43 - TweetRetreival - INFO - Number of entries added : 22
+03-Feb-22 00:35:43 - TweetRetreival - INFO - ID of last retrieved tweet: 1488989228730298368
+03-Feb-22 00:38:15 - TweetRetreival - INFO - Writing to data/TweetsAndReplies.csv ....
+03-Feb-22 00:38:42 - TweetRetreival - INFO - Number of entries added : 22
+03-Feb-22 00:38:42 - TweetRetreival - INFO - ID of last retrieved tweet: 1488989841777901568

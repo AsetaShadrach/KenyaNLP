@@ -64,8 +64,9 @@ class CreateTweetsCsv():
                                     tweet_text = pattern.sub('', tweet_text)
                                 
                             reply_text = pattern.sub('', reply.full_text)
-                            tweet_data["Tweet"].append(tweet_text)
-                            tweet_data["Reply"].append(reply_text)
+                            if (tweet_text != None) & (reply_text != None):
+                                tweet_data["Tweet"].append(tweet_text)
+                                tweet_data["Reply"].append(reply_text)
                         # Combine them all into one df
                         data = DataFrame(tweet_data).drop_duplicates()
                         data.to_csv(self.tweets_csv_file_path,
