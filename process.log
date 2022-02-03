@@ -1,0 +1,68 @@
+03-Feb-22 00:06:36 - TweetRetreival - ERROR - list index out of range
+03-Feb-22 00:06:36 - TweetRetreival - ERROR - The last line did not contain the Tweet ID for the last entry
+03-Feb-22 00:06:37 - TweetRetreival - INFO - File created ...
+Writing to TweetsAndReplies.csv ....
+03-Feb-22 00:07:08 - TweetRetreival - INFO - Number of entries added : 22
+03-Feb-22 00:07:08 - TweetRetreival - INFO - ID of last retrieved tweet: 1488982166453243912
+03-Feb-22 00:08:34 - TweetRetreival - INFO - Writing to TweetsAndReplies.csv ....
+03-Feb-22 00:08:39 - TweetRetreival - INFO - ID of last retrieved tweet before KeybordInterrupt: 1488982166453243912
+03-Feb-22 00:15:03 - TweetRetreival - ERROR - 'CreateTweetsCsv' object has no attribute 'tweets_csv_file_name'
+Traceback (most recent call last):
+  File "c:/Users/Aseta/Desktop/D S/ML_AI/Twitter app/KenyaNLP/TweetRetreiver.py", line 41, in <module>
+    make_csv.GetTweetsAndReplies(api)
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\GetTweets.py", line 36, in GetTweetsAndReplies
+    if self.MakeCsvFile():
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\GetTweets.py", line 22, in MakeCsvFile
+    with open(self.tweets_csv_file_name,"a+") as tweets_csv_file:
+AttributeError: 'CreateTweetsCsv' object has no attribute 'tweets_csv_file_name'
+03-Feb-22 00:17:11 - TweetRetreival - ERROR - invalid literal for int() with base 10: "'tweets_csv_file_name'"
+03-Feb-22 00:17:11 - TweetRetreival - ERROR - The last line did not contain the Tweet ID for the last entry
+03-Feb-22 00:17:12 - TweetRetreival - INFO - File created ...
+Writing to data/TweetsAndReplies.csv ....
+03-Feb-22 00:17:42 - TweetRetreival - INFO - Number of entries added : 22
+03-Feb-22 00:17:42 - TweetRetreival - INFO - ID of last retrieved tweet: 1488984661099483136
+03-Feb-22 00:18:51 - TweetRetreival - INFO - Writing to data/TweetsAndReplies.csv ....
+03-Feb-22 00:19:21 - TweetRetreival - INFO - Number of entries added : 22
+03-Feb-22 00:19:21 - TweetRetreival - INFO - ID of last retrieved tweet: 1488985112918298627
+03-Feb-22 00:20:49 - TweetRetreival - INFO - Writing to data/TweetsAndReplies.csv ....
+03-Feb-22 00:21:20 - TweetRetreival - INFO - Number of entries added : 22
+03-Feb-22 00:21:20 - TweetRetreival - INFO - ID of last retrieved tweet: 1488985352194990085
+03-Feb-22 00:22:15 - TweetRetreival - INFO - Writing to data/TweetsAndReplies.csv ....
+03-Feb-22 00:22:23 - TweetRetreival - INFO - ID of last retrieved tweet before KeybordInterrupt: 1488985352194990085
+03-Feb-22 00:22:58 - TweetRetreival - INFO - Writing to data/TweetsAndReplies.csv ....
+03-Feb-22 00:23:28 - TweetRetreival - INFO - Number of entries added : 22
+03-Feb-22 00:23:28 - TweetRetreival - INFO - ID of last retrieved tweet: 1488986209070170112
+03-Feb-22 00:30:28 - TweetRetreival - ERROR - [{'code': 215, 'message': 'Bad Authentication data.'}]
+Traceback (most recent call last):
+  File "c:/Users/Aseta/Desktop/D S/ML_AI/Twitter app/KenyaNLP/TweetRetreiver.py", line 33, in main
+    api.verify_credentials()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\api.py", line 605, in verify_credentials
+    )(**kargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 250, in _call
+    return method.execute()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 233, in execute
+    raise TweepError(error_msg, resp, api_code=api_error_code)
+tweepy.error.TweepError: [{'code': 215, 'message': 'Bad Authentication data.'}]
+03-Feb-22 00:32:01 - TweetRetreival - ERROR - invalid literal for int() with base 10: "data.'}]"
+03-Feb-22 00:32:01 - TweetRetreival - ERROR - The last line did not contain the Tweet ID for the last entry
+03-Feb-22 00:32:02 - TweetRetreival - INFO - Writing to data/TweetsAndReplies.csv ....
+03-Feb-22 00:32:33 - TweetRetreival - INFO - Number of entries added : 22
+03-Feb-22 00:32:33 - TweetRetreival - INFO - ID of last retrieved tweet: 1488988519666225169
+03-Feb-22 00:34:33 - TweetRetreival - ERROR - [{'code': 215, 'message': 'Bad Authentication data.'}]
+Traceback (most recent call last):
+  File "c:/Users/Aseta/Desktop/D S/ML_AI/Twitter app/KenyaNLP/TweetRetreiver.py", line 32, in main
+    api.verify_credentials()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\api.py", line 605, in verify_credentials
+    )(**kargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 250, in _call
+    return method.execute()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 233, in execute
+    raise TweepError(error_msg, resp, api_code=api_error_code)
+tweepy.error.TweepError: [{'code': 215, 'message': 'Bad Authentication data.'}]
+03-Feb-22 00:34:33 - TweetRetreival - INFO - ID of last retrieved tweet before the Error abover: 1488988519666225169
+03-Feb-22 00:35:13 - TweetRetreival - INFO - Writing to data/TweetsAndReplies.csv ....
+03-Feb-22 00:35:43 - TweetRetreival - INFO - Number of entries added : 22
+03-Feb-22 00:35:43 - TweetRetreival - INFO - ID of last retrieved tweet: 1488989228730298368
+03-Feb-22 00:38:15 - TweetRetreival - INFO - Writing to data/TweetsAndReplies.csv ....
+03-Feb-22 00:38:42 - TweetRetreival - INFO - Number of entries added : 22
+03-Feb-22 00:38:42 - TweetRetreival - INFO - ID of last retrieved tweet: 1488989841777901568
