@@ -42,11 +42,11 @@ class CreateTweetsCsv():
                                             include_rts=True,
                                             since_id = self.last_id_logged,
                                             include_entities=False,
-                                            count=2).items(2):
+                                            count=200).items():
                     replies = tweepy.Cursor(api.search, 
                                             q='to:{} -filter:retweets'.format(tweet.user.screen_name), 
                                             tweet_mode='extended', 
-                                            include_entities=False).items(11)
+                                            include_entities=False).items(100)
 
                     tweet_data = {"Tweet":[], "Reply":[]}
 
