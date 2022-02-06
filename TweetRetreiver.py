@@ -38,7 +38,7 @@ def main(api_key, api_secret,access_token, access_token_secret ):
 
     except Exception as error:
         logger.exception(error)
-        logger.info("ID of last retrieved tweet before the Error abover: "+str(last_id_logged ))
+        logger.info("ID of last retrieved tweet before the Error above: "+str(last_id_logged ))
     
     return None
 
