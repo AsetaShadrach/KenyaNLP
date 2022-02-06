@@ -10,7 +10,6 @@ access_token_secret = ""
 api_key = ""
 api_secret = ""
 
-
 tweets_csv_file_path = "data/TweetsAndReplies.csv"
 
 def main(api_key, api_secret,access_token, access_token_secret ):

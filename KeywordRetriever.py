@@ -3,7 +3,7 @@ from GetTweets import CreateTweetsCsv, tweepy
 
 
 def main(api_key, api_secret, access_token, access_token_secret):
-    logger = logfileConfig.mk_log('getKeywords')
+    logger = logfileConfig.mk_log('KeywordRetrieval')
 
     auth = tweepy.OAuthHandler(api_key, api_secret)
     auth.set_access_token(access_token, access_token_secret)
