@@ -14,9 +14,9 @@ def main(api_key, api_secret, access_token, access_token_secret):
 
     try:
         api.verify_credentials()
-        print("twitter_KE_NLP Running")
+        logger.info("twitter_KE_NLP Running")
 
-        for keyword_ in ['list', 'of', 'keywords']:
+        for keyword_ in ['njaanuary', 'expressway', 'construction', 'mejja', 'masculinitysaturday']:
             tweets_csv_file_path = f"Keyword_{keyword_}_AndReplies.csv"
 
             make_csv = CreateTweetsCsv(tweets_csv_file_path,
