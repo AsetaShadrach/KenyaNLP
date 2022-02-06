@@ -113,6 +113,55 @@ class CreateTweetsCsv():
 
         else:
             self.logger.critical(" Could Not find/create csv file to write to")
+
+
+
+    def GetTweetsByKeyword(self, api, kword):
+        regex_str = "@\S*[^\s]|RT |\S*https?:\S*|(\n+)(?=.*)"
+        pattern = re.compile(regex_str)
+
+        if self.MakeCsvFile():
+            # Search for a tweet on the timeline
+            # Find the replies
+            for tweet in tweepy.Cursor(api.search,
+                                       q=kword).items():
+                replies = tweepy.Cursor(api.search,
+                                        q='to:{} -filter:retweets'.format(tweet.user.screen_name),
+                                        tweet_mode='extended').items(50)
+
+                tweet_data = {"Tweet": [], "Reply": []}
+
+                try:
+                    for reply in replies:
+                        if reply.in_reply_to_status_id == tweet.id:
+                            tweet_text = pattern.sub('', tweet.text)
+                        else:
+                            # Find the original tweets for the replies without
+                            tweetFetched = api.get_status(reply.in_reply_to_status_id,
+                                                          include_entities=False)
+                            tweet_text = tweetFetched.text
+                            tweet_text = pattern.sub('', tweet_text)
+
+                        reply_text = pattern.sub('', reply.full_text)
+                        tweet_data["Tweet"].append(tweet_text)
+                        tweet_data["Reply"].append(reply_text)
+
+                    # Combine them all into one df
+                    data = DataFrame(tweet_data).drop_duplicates()
+                    data.to_csv(self.tweets_csv_file_path,
+                                mode='a',
+                                header=None,
+                                index=False)
+
+                    self.logger.info("Data Entered: ", len(data))
+
+                except:
+                    time.sleep(120)
+                    continue
+
+
+        else:
+            self.logger.critical(" Could Not find/create csv file to write to")
         
         
 
