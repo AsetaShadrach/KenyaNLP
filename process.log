@@ -1,0 +1,3 @@
+06-Feb-22 15:08:23 - TweetRetreival - ERROR - list index out of range
+06-Feb-22 15:08:23 - TweetRetreival - ERROR - The last line did not contain the Tweet ID for the last entry
+06-Feb-22 15:08:24 - TweetRetreival - INFO - Writing to data/TweetsAndReplies.csv ....

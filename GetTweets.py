@@ -153,7 +153,7 @@ class CreateTweetsCsv():
                                 header=None,
                                 index=False)
 
-                    self.logger.info("Data Entered: ", len(data))
+                    self.logger.info(f"Data Entered: {len(data)}")
 
                 except:
                     time.sleep(120)
