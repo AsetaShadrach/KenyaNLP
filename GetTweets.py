@@ -78,7 +78,7 @@ class CreateTweetsCsv():
                         current_since_id = tweet.id
                         # Get the amount of data recieved
                         records_added += len(data)
-                        #We will use this to check if saving was complete before interrupt interrupts
+                        # We will use this to check if saving was complete before interrupt interrupts
                         data_saved = True
                         
                     except tweepy.error.TweepError as er:
@@ -92,21 +92,21 @@ class CreateTweetsCsv():
                     time.sleep(3)
 
                 self.logger.info("Number of entries added : "+str(records_added))
-                # Make these the last entry for easy retreival 
+                # Make these the last entry for easy retrieval
                 self.logger.info("ID of last retrieved tweet: "+str(tweet.id ))
             except KeyboardInterrupt:
                 if data_saved:
                     # These will log the last values assigned before the interrupt
-                    self.logger.info("Number of entries added before KeybordInterrupt: "+str(records_added))
+                    self.logger.info("Number of entries added before KeyboardInterrupt: "+str(records_added))
                     if current_since_id:
-                        self.logger.info("ID of last retrieved tweet before KeybordInterrupt: "+str(current_since_id ))
+                        self.logger.info("ID of last retrieved tweet before KeyboardInterrupt: "+str(current_since_id ))
                     else:
                         # If it hasn't completed the loop successfully even once
-                        self.logger.info("ID of last retrieved tweet before KeybordInterrupt: "+str(self.last_id_logged ))
+                        self.logger.info("ID of last retrieved tweet before KeyboardInterrupt: "+str(self.last_id_logged ))
                         
                 else:
-                    #If the data was
-                    self.logger.info("ID of last retrieved tweet before KeybordInterrupt: "+str(self.last_id_logged ))
+                    # If the data was
+                    self.logger.info("ID of last retrieved tweet before KeyboardInterrupt: "+str(self.last_id_logged ))
                 
                 sys.exit(0)
 
