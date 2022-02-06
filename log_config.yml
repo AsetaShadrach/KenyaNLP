@@ -17,6 +17,10 @@ loggers:
     level: DEBUG
     handlers: [file]
     propagate: no
+  KeywordRetrieval:
+    level: DEBUG
+    handlers: [file]
+    propagate: no
 root:
   level: DEBUG
   handlers: [console]
