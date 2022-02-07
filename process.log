@@ -1,3 +1,286 @@
-06-Feb-22 15:08:23 - TweetRetreival - ERROR - list index out of range
-06-Feb-22 15:08:23 - TweetRetreival - ERROR - The last line did not contain the Tweet ID for the last entry
-06-Feb-22 15:08:24 - TweetRetreival - INFO - Writing to data/TweetsAndReplies.csv ....
+05-Feb-22 04:58:06 - TweetRetreival - ERROR - list index out of range
+05-Feb-22 04:58:06 - TweetRetreival - ERROR - The last line did not contain the Tweet ID for the last entry
+05-Feb-22 04:58:07 - TweetRetreival - INFO - File created ...
+Writing to data/TweetsAndReplies.csv ....
+05-Feb-22 09:47:46 - TweetRetreival - INFO - Number of entries added : 15263
+05-Feb-22 09:47:46 - TweetRetreival - INFO - ID of last retrieved tweet: 1489736151724441612
+05-Feb-22 12:37:17 - TweetRetreival - INFO - Writing to data/TweetsAndReplies.csv ....
+05-Feb-22 17:14:45 - TweetRetreival - INFO - Number of entries added : 14250
+05-Feb-22 17:14:45 - TweetRetreival - INFO - ID of last retrieved tweet: 1489885115245334530
+05-Feb-22 21:22:22 - TweetRetreival - INFO - Writing to data/TweetsAndReplies.csv ....
+06-Feb-22 02:47:07 - TweetRetreival - INFO - Number of entries added : 17234
+06-Feb-22 02:47:07 - TweetRetreival - INFO - ID of last retrieved tweet: 1490014946134048776
+06-Feb-22 14:42:15 - TweetRetreival - INFO - Writing to data/TweetsAndReplies.csv ....
+06-Feb-22 19:44:54 - TweetRetreival - ERROR - Failed to send request: HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/home_timeline.json?max_id=1490276935984943106&include_rts=True&since_id=1490014946134048776&include_entities=False&count=200 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x00000200EBAED308>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+Traceback (most recent call last):
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Aseta\Anaconda3\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x00000200EBAED308>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\util\retry.py", line 399, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/home_timeline.json?max_id=1490276935984943106&include_rts=True&since_id=1490014946134048776&include_entities=False&count=200 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x00000200EBAED308>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 189, in execute
+    proxies=self.api.proxy)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/home_timeline.json?max_id=1490276935984943106&include_rts=True&since_id=1490014946134048776&include_entities=False&count=200 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x00000200EBAED308>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:/Users/Aseta/Desktop/D S/ML_AI/Twitter app/KenyaNLP/TweetRetreiver.py", line 44, in main
+    make_csv.GetTweetsAndReplies(api)
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\GetTweets.py", line 45, in GetTweetsAndReplies
+    count=200).items():
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\cursor.py", line 47, in __next__
+    return self.next()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\cursor.py", line 195, in next
+    self.current_page = self.page_iterator.next()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\cursor.py", line 106, in next
+    data = self.method(max_id=self.max_id, parser=RawParser(), *self.args, **self.kargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 250, in _call
+    return method.execute()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 191, in execute
+    six.reraise(TweepError, TweepError('Failed to send request: %s' % e), sys.exc_info()[2])
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\six.py", line 692, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 189, in execute
+    proxies=self.api.proxy)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+tweepy.error.TweepError: Failed to send request: HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/home_timeline.json?max_id=1490276935984943106&include_rts=True&since_id=1490014946134048776&include_entities=False&count=200 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x00000200EBAED308>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+06-Feb-22 19:45:02 - TweetRetreival - INFO - ID of last retrieved tweet before the Error abover: 1490014946134048776
+06-Feb-22 20:19:59 - TweetRetreival - INFO - Writing to data/TweetsAndReplies.csv ....
+06-Feb-22 20:20:50 - TweetRetreival - ERROR - Failed to send request: HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/home_timeline.json?max_id=1490363544235573248&include_rts=True&since_id=1490014946134048776&include_entities=False&count=200 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001D2C2D3CF88>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+Traceback (most recent call last):
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Aseta\Anaconda3\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000001D2C2D3CF88>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\util\retry.py", line 399, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/home_timeline.json?max_id=1490363544235573248&include_rts=True&since_id=1490014946134048776&include_entities=False&count=200 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001D2C2D3CF88>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 189, in execute
+    proxies=self.api.proxy)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/home_timeline.json?max_id=1490363544235573248&include_rts=True&since_id=1490014946134048776&include_entities=False&count=200 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001D2C2D3CF88>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:/Users/Aseta/Desktop/D S/ML_AI/Twitter app/KenyaNLP/TweetRetreiver.py", line 44, in main
+    make_csv.GetTweetsAndReplies(api)
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\GetTweets.py", line 45, in GetTweetsAndReplies
+    count=200).items():
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\cursor.py", line 47, in __next__
+    return self.next()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\cursor.py", line 195, in next
+    self.current_page = self.page_iterator.next()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\cursor.py", line 106, in next
+    data = self.method(max_id=self.max_id, parser=RawParser(), *self.args, **self.kargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 250, in _call
+    return method.execute()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 191, in execute
+    six.reraise(TweepError, TweepError('Failed to send request: %s' % e), sys.exc_info()[2])
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\six.py", line 692, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 189, in execute
+    proxies=self.api.proxy)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+tweepy.error.TweepError: Failed to send request: HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/home_timeline.json?max_id=1490363544235573248&include_rts=True&since_id=1490014946134048776&include_entities=False&count=200 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001D2C2D3CF88>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+06-Feb-22 20:20:50 - TweetRetreival - INFO - Number of entries added before KeybordInterrupt: 0
+06-Feb-22 20:20:50 - TweetRetreival - INFO - ID of last retrieved tweet before the Error above: 1490014946134048776
+06-Feb-22 20:22:11 - TweetRetreival - INFO - Writing to data/TweetsAndReplies.csv ....
+06-Feb-22 20:41:33 - TweetRetreival - ERROR - Failed to send request: HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/home_timeline.json?max_id=1490363575957094402&include_rts=True&since_id=1490014946134048776&include_entities=False&count=200 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x00000225FE348E08>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+Traceback (most recent call last):
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Aseta\Anaconda3\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x00000225FE348E08>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\util\retry.py", line 399, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/home_timeline.json?max_id=1490363575957094402&include_rts=True&since_id=1490014946134048776&include_entities=False&count=200 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x00000225FE348E08>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 189, in execute
+    proxies=self.api.proxy)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/home_timeline.json?max_id=1490363575957094402&include_rts=True&since_id=1490014946134048776&include_entities=False&count=200 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x00000225FE348E08>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:/Users/Aseta/Desktop/D S/ML_AI/Twitter app/KenyaNLP/TweetRetreiver.py", line 44, in main
+    make_csv.GetTweetsAndReplies(api)
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\GetTweets.py", line 45, in GetTweetsAndReplies
+    count=200).items():
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\cursor.py", line 47, in __next__
+    return self.next()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\cursor.py", line 195, in next
+    self.current_page = self.page_iterator.next()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\cursor.py", line 106, in next
+    data = self.method(max_id=self.max_id, parser=RawParser(), *self.args, **self.kargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 250, in _call
+    return method.execute()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 191, in execute
+    six.reraise(TweepError, TweepError('Failed to send request: %s' % e), sys.exc_info()[2])
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\six.py", line 692, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 189, in execute
+    proxies=self.api.proxy)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+tweepy.error.TweepError: Failed to send request: HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/home_timeline.json?max_id=1490363575957094402&include_rts=True&since_id=1490014946134048776&include_entities=False&count=200 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x00000225FE348E08>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+06-Feb-22 20:41:33 - TweetRetreival - INFO - Number of entries added before the Error above: 962
+06-Feb-22 20:41:33 - TweetRetreival - INFO - ID of last retrieved tweet before the Error above: 1490014946134048776
+06-Feb-22 22:13:05 - TweetRetreival - INFO - Writing to data/TweetsAndReplies.csv ....
+06-Feb-22 23:00:12 - TweetRetreival - INFO - ID of last retrieved tweet before KeybordInterrupt: 1490014946134048776
+06-Feb-22 23:37:18 - TweetRetreival - INFO - Writing to data/TweetsAndReplies.csv ....
+06-Feb-22 23:39:54 - TweetRetreival - INFO - Number of entries added before KeybordInterrupt: 99
+06-Feb-22 23:39:54 - TweetRetreival - INFO - ID of last retrieved tweet before KeybordInterrupt: 1490424333025652743
+07-Feb-22 00:20:10 - TweetRetreival - INFO - Writing to data/TweetsAndReplies.csv ....
+07-Feb-22 03:25:27 - TweetRetreival - INFO - Number of entries added before KeybordInterrupt: 10374
+07-Feb-22 03:25:27 - TweetRetreival - INFO - ID of last retrieved tweet before KeybordInterrupt: 1490427402257940480
+07-Feb-22 06:44:21 - KeywordRetrieval - INFO - twitter_KE_NLP Running
+07-Feb-22 06:44:21 - KeywordRetrieval - INFO - File created ...
+Writing to Keyword_njaanuary_AndReplies.csv ....
+07-Feb-22 06:44:36 - KeywordRetrieval - INFO - Number of entries added : 1
+07-Feb-22 06:44:36 - KeywordRetrieval - INFO - ID of last retrieved tweet: 1490434927745277954
+07-Feb-22 06:44:36 - KeywordRetrieval - INFO - File created ...
+Writing to Keyword_expressway_AndReplies.csv ....
+07-Feb-22 06:44:44 - KeywordRetrieval - INFO - Number of entries added : 11
+07-Feb-22 06:44:44 - KeywordRetrieval - INFO - ID of last retrieved tweet: 1490531045321502722
+07-Feb-22 06:44:44 - KeywordRetrieval - INFO - File created ...
+Writing to Keyword_construction_AndReplies.csv ....
+07-Feb-22 06:44:55 - KeywordRetrieval - INFO - Number of entries added : 9
+07-Feb-22 06:44:55 - KeywordRetrieval - INFO - ID of last retrieved tweet: 1490531927773876225
+07-Feb-22 06:44:55 - KeywordRetrieval - INFO - File created ...
+Writing to Keyword_mejja_AndReplies.csv ....
+07-Feb-22 06:45:01 - KeywordRetrieval - INFO - Number of entries added : 2
+07-Feb-22 06:45:01 - KeywordRetrieval - INFO - ID of last retrieved tweet: 1490530583319138304
+07-Feb-22 06:45:01 - KeywordRetrieval - INFO - File created ...
+Writing to Keyword_masculinitysaturday_AndReplies.csv ....
+07-Feb-22 06:45:23 - KeywordRetrieval - INFO - Number of entries added : 20
+07-Feb-22 06:45:23 - KeywordRetrieval - INFO - ID of last retrieved tweet: 1490527326655897604
+07-Feb-22 06:46:10 - TweetRetreival - INFO - Writing to data/TweetsAndReplies.csv ....
+07-Feb-22 06:46:14 - TweetRetreival - INFO - Number of entries added before KeybordInterrupt: 0
+07-Feb-22 06:46:14 - TweetRetreival - INFO - ID of last retrieved tweet before KeybordInterrupt: 1490527326655897604
+07-Feb-22 06:47:08 - TweetRetreival - INFO - Writing to data/TweetsAndReplies.csv ....
+07-Feb-22 06:48:50 - TweetRetreival - INFO - Number of entries added : 99
+07-Feb-22 06:48:50 - TweetRetreival - INFO - ID of last retrieved tweet: 1490529889191182339

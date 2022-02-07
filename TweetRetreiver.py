@@ -1,18 +1,8 @@
 import logfileConfig
 from GetTweets import CreateTweetsCsv, tweepy
 
-client_key = ""
-client_secret = ""
 
-access_token = ""
-access_token_secret = ""
-
-api_key = ""
-api_secret = ""
-
-tweets_csv_file_path = "data/TweetsAndReplies.csv"
-
-def main(api_key, api_secret,access_token, access_token_secret ):
+def main(api_key, api_secret,access_token, access_token_secret,tweets_csv_file_path ):
     '''
     Combine everything and run it :
     From csv/log file creation, to the appending of data and logging
@@ -20,27 +10,54 @@ def main(api_key, api_secret,access_token, access_token_secret ):
     logger = logfileConfig.mk_log('TweetRetreival')
     last_id_logged = logfileConfig.get_last_tweet_id("process.log",logger)
 
-    auth = tweepy.OAuthHandler(api_key,api_secret)
-    auth.set_access_token(access_token, access_token_secret)
-
-    api = tweepy.API(   auth, 
-                        wait_on_rate_limit=True, 
-                        wait_on_rate_limit_notify=True )
-
     try:
+        auth = tweepy.OAuthHandler(api_key,api_secret)
+        auth.set_access_token(access_token, access_token_secret)
+
+        api = tweepy.API(   auth, 
+                            wait_on_rate_limit=True, 
+                            wait_on_rate_limit_notify=True )
+
+    
         api.verify_credentials()
         print("twitter_KE_NLP Running")
+        tweet_cursor  = tweepy.Cursor( api.home_timeline, 
+                                            include_rts=True, 
+                                            since_id = last_id_logged,
+                                            include_entities=False,
+                                            count=200)
+
         make_csv = CreateTweetsCsv( tweets_csv_file_path,
                                     logger,
+                                    tweet_cursor,
                                     last_id_logged=last_id_logged)
+
         make_csv.GetTweetsAndReplies(api)
 
+    
     except Exception as error:
         logger.exception(error)
+        # Check if the connection already existed
+        if make_csv:
+            logger.info("Number of entries added before the Error above: "+str(make_csv.records_added))
+            
         logger.info("ID of last retrieved tweet before the Error above: "+str(last_id_logged ))
     
-    return None
 
+    return None
+    
 
 if __name__ == '__main__':
-    main(api_key, api_secret,access_token, access_token_secret )
+    client_key = ""
+    client_secret = ""
+
+    access_token = ""
+    access_token_secret = ""
+
+    api_key = ""
+    api_secret = ""
+
+    tweets_csv_file_path = "data/TweetsAndReplies.csv"
+
+
+    main(api_key, api_secret,access_token, access_token_secret, tweets_csv_file_path )

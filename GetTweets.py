@@ -1,4 +1,3 @@
-import time
 import tweepy
 import re
 import csv
@@ -8,10 +7,11 @@ from pandas import DataFrame
 
 class CreateTweetsCsv():
 
-    def __init__(self,tweets_csv_file_path,logger,last_id_logged=None) -> None:
+    def __init__(self,tweets_csv_file_path,logger,tweet_cursor,last_id_logged=None) -> None:
         self.tweets_csv_file_path = tweets_csv_file_path
         self.logger = logger
         self.last_id_logged = last_id_logged
+        self.tweet_cursor =  tweet_cursor
 
     def MakeCsvFile(self) -> bool:
         write_to_file = False
@@ -37,21 +37,25 @@ class CreateTweetsCsv():
             # Search for a tweet on the timeline
             # Find the replies
             try:
-                records_added = 0
-                for tweet in tweepy.Cursor( api.home_timeline, 
-                                            include_rts=True,
-                                            since_id = self.last_id_logged,
-                                            include_entities=False,
-                                            count=200).items():
-                    replies = tweepy.Cursor(api.search, 
-                                            q='to:{} -filter:retweets'.format(tweet.user.screen_name), 
-                                            tweet_mode='extended', 
-                                            include_entities=False).items(100)
+                self.records_added = 0
+                self.current_since_id = None
+                # Alter the number of items to be returned
+                for tweet in self.tweet_cursor.items():
+                    '''
+                    replies = tweepy.Cursor(api.search,  
+                                    tweet_mode='extended',
+                                    q = 'to:{} -filter:retweets'.format(tweet.user.screen_name), 
+                                    include_entities=False).items(100)
+                    '''
+                    
+                    replies = tweepy.Cursor(api.search,
+                                        q='to:{} -filter:retweets'.format(tweet.user.screen_name),
+                                        tweet_mode='extended').items(10)
+                    
 
                     tweet_data = {"Tweet":[], "Reply":[]}
 
                     try:
-                        data_saved = False
                         for reply in replies:
                             if reply.in_reply_to_status_id==tweet.id:
                                 tweet_text = pattern.sub('', tweet.text)
@@ -74,13 +78,12 @@ class CreateTweetsCsv():
                                 header = None,
                                 index = False)
                         
-                        # Save the last tweet id retreived
-                        current_since_id = tweet.id
                         # Get the amount of data recieved
-                        records_added += len(data)
-                        # We will use this to check if saving was complete before interrupt interrupts
-                        data_saved = True
-                        
+                        self.records_added += len(data)
+                        # Save the last tweet id retreived
+                        self.current_since_id = tweet.id
+
+
                     except tweepy.error.TweepError as er:
                         # Log the specific errors if need be
                         continue
@@ -88,80 +91,27 @@ class CreateTweetsCsv():
                     except Exception as e:
                         self.logger.exception(e)
 
-    
-                    time.sleep(3)
 
-                self.logger.info("Number of entries added : "+str(records_added))
-                # Make these the last entry for easy retrieval
-                self.logger.info("ID of last retrieved tweet: "+str(tweet.id ))
+                self.logger.info("Number of entries added : "+str(self.records_added))
+                # Make these the last entry for easy retreival 
+                self.logger.info("ID of last retrieved tweet: "+str(self.current_since_id ))
+
             except KeyboardInterrupt:
-                if data_saved:
-                    # These will log the last values assigned before the interrupt
-                    self.logger.info("Number of entries added before KeyboardInterrupt: "+str(records_added))
-                    if current_since_id:
-                        self.logger.info("ID of last retrieved tweet before KeyboardInterrupt: "+str(current_since_id ))
-                    else:
-                        # If it hasn't completed the loop successfully even once
-                        self.logger.info("ID of last retrieved tweet before KeyboardInterrupt: "+str(self.last_id_logged ))
-                        
+                # These will log the last values assigned before the interrupt
+                self.logger.info("Number of entries added before KeybordInterrupt: "+str(self.records_added))
+                
+                # if it had run through a complete cycle for tweet replies at least once
+                if self.current_since_id:
+                    self.logger.info("ID of last retrieved tweet before KeybordInterrupt: "+str(self.current_since_id ))
                 else:
-                    # If the data was
-                    self.logger.info("ID of last retrieved tweet before KeyboardInterrupt: "+str(self.last_id_logged ))
+                    # If it hasn't completed the loop successfully even once
+                    self.logger.info("ID of last retrieved tweet before KeybordInterrupt: "+str(self.last_id_logged ))
+                      
                 
                 sys.exit(0)
 
 
         else:
             self.logger.critical(" Could Not find/create csv file to write to")
-
-
-
-    def GetTweetsByKeyword(self, api, kword):
-        regex_str = "@\S*[^\s]|RT |\S*https?:\S*|(\n+)(?=.*)"
-        pattern = re.compile(regex_str)
-
-        if self.MakeCsvFile():
-            # Search for a tweet on the timeline
-            # Find the replies
-            for tweet in tweepy.Cursor(api.search,
-                                       q=kword).items():
-                replies = tweepy.Cursor(api.search,
-                                        q='to:{} -filter:retweets'.format(tweet.user.screen_name),
-                                        tweet_mode='extended').items(50)
-
-                tweet_data = {"Tweet": [], "Reply": []}
-
-                try:
-                    for reply in replies:
-                        if reply.in_reply_to_status_id == tweet.id:
-                            tweet_text = pattern.sub('', tweet.text)
-                        else:
-                            # Find the original tweets for the replies without
-                            tweetFetched = api.get_status(reply.in_reply_to_status_id,
-                                                          include_entities=False)
-                            tweet_text = tweetFetched.text
-                            tweet_text = pattern.sub('', tweet_text)
-
-                        reply_text = pattern.sub('', reply.full_text)
-                        tweet_data["Tweet"].append(tweet_text)
-                        tweet_data["Reply"].append(reply_text)
-
-                    # Combine them all into one df
-                    data = DataFrame(tweet_data).drop_duplicates()
-                    data.to_csv(self.tweets_csv_file_path,
-                                mode='a',
-                                header=None,
-                                index=False)
-
-                    self.logger.info(f"Data Entered: {len(data)}")
-
-                except:
-                    time.sleep(120)
-                    continue
-
-
-        else:
-            self.logger.critical(" Could Not find/create csv file to write to")
         
-        
-
+ 
