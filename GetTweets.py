@@ -41,7 +41,7 @@ class CreateTweetsCsv():
                 self.current_since_id = None
                 # Alter the number of items to be returned
                 for tweet in self.tweet_cursor.items():
-                    '''
+                    
                     replies = tweepy.Cursor(api.search,  
                                     tweet_mode='extended',
                                     q = 'to:{} -filter:retweets'.format(tweet.user.screen_name), 
@@ -51,7 +51,7 @@ class CreateTweetsCsv():
                     replies = tweepy.Cursor(api.search,
                                         q='to:{} -filter:retweets'.format(tweet.user.screen_name),
                                         tweet_mode='extended').items(10)
-                    
+                    '''
 
                     tweet_data = {"Tweet":[], "Reply":[]}
 

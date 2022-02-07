@@ -33,10 +33,13 @@ def main(api_key, api_secret, access_token, access_token_secret):
 
     except Exception as error:
         logger.exception(error)
-        if make_csv:
+        # Check if the connection already existed and if it has run atleast one cycle
+        if make_csv and make_csv.current_since_id :
             logger.info("Number of entries added before the Error above: "+str(make_csv.records_added))
-
-        logger.info("ID of last retrieved tweet before the Error above: "+str(last_id_logged ))
+            logger.info("ID of last retrieved tweet before the Error above: "+str(make_csv.current_since_id ))
+        else:
+            logger.info("Number of entries added before the Error above: "+str(0))
+            logger.info("ID of last retrieved tweet before the Error above: "+str(last_id_logged ))
     
 
     return None
