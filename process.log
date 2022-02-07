@@ -444,3 +444,48 @@ Traceback (most recent call last):
 tweepy.error.TweepError: Failed to send request: HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/home_timeline.json?max_id=1490738455093129219&include_rts=True&since_id=1490646271320891392&include_entities=False&count=200 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000029920701A88>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
 07-Feb-22 21:25:23 - TweetRetreival - INFO - Number of entries added before the Error above: 896
 07-Feb-22 21:25:23 - TweetRetreival - INFO - ID of last retrieved tweet before the Error above: 1490747995108880385
+07-Feb-22 22:28:17 - TweetRetreival - INFO - twitter_KE_NLP Running
+07-Feb-22 22:28:17 - TweetRetreival - INFO - Writing to data/TweetsAndReplies.csv ....
+07-Feb-22 22:28:20 - TweetRetreival - ERROR - 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\GetTweets.py", line 61, in GetTweetsAndReplies
+    for reply in replies:
+TypeError: 'NoneType' object is not iterable
+07-Feb-22 22:28:20 - TweetRetreival - ERROR - 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\GetTweets.py", line 61, in GetTweetsAndReplies
+    for reply in replies:
+TypeError: 'NoneType' object is not iterable
+07-Feb-22 22:28:20 - TweetRetreival - INFO - Number of entries added : 0
+07-Feb-22 22:28:20 - TweetRetreival - INFO - ID of last retrieved tweet: None
+07-Feb-22 22:32:03 - TweetRetreival - ERROR - invalid literal for int() with base 10: 'None'
+07-Feb-22 22:32:03 - TweetRetreival - ERROR - The last line did not contain the Tweet ID for the last entry
+07-Feb-22 22:32:04 - TweetRetreival - INFO - twitter_KE_NLP Running
+07-Feb-22 22:32:04 - TweetRetreival - ERROR - name 'tweet' is not defined
+Traceback (most recent call last):
+  File "c:/Users/Aseta/Desktop/D S/ML_AI/Twitter app/KenyaNLP/TweetRetreiver.py", line 36, in main
+    exec(reply_cursor_str)
+  File "<string>", line 3, in <module>
+NameError: name 'tweet' is not defined
+07-Feb-22 22:33:44 - TweetRetreival - ERROR - invalid literal for int() with base 10: 'defined'
+07-Feb-22 22:33:44 - TweetRetreival - ERROR - The last line did not contain the Tweet ID for the last entry
+07-Feb-22 22:33:45 - TweetRetreival - INFO - twitter_KE_NLP Running
+07-Feb-22 22:33:45 - TweetRetreival - INFO - Writing to data/TweetsAndReplies.csv ....
+07-Feb-22 22:33:51 - TweetRetreival - ERROR - 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\GetTweets.py", line 63, in GetTweetsAndReplies
+    for reply in replies:
+TypeError: 'NoneType' object is not iterable
+07-Feb-22 22:33:51 - TweetRetreival - ERROR - 'NoneType' object is not iterable
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\GetTweets.py", line 63, in GetTweetsAndReplies
+    for reply in replies:
+TypeError: 'NoneType' object is not iterable
+07-Feb-22 22:33:51 - TweetRetreival - INFO - Number of entries added : 0
+07-Feb-22 22:33:51 - TweetRetreival - INFO - ID of last retrieved tweet: None
+07-Feb-22 22:57:31 - TweetRetreival - ERROR - invalid literal for int() with base 10: 'None'
+07-Feb-22 22:57:31 - TweetRetreival - ERROR - The last line did not contain the Tweet ID for the last entry
+07-Feb-22 22:57:33 - TweetRetreival - INFO - twitter_KE_NLP Running
+07-Feb-22 22:57:33 - TweetRetreival - INFO - Writing to data/TweetsAndReplies.csv ....
+07-Feb-22 22:57:43 - TweetRetreival - INFO - Number of entries added : 4
+07-Feb-22 22:57:43 - TweetRetreival - INFO - ID of last retrieved tweet: 1490776521555984389

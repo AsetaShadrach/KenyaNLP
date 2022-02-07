@@ -46,8 +46,8 @@ class CreateTweetsCsv():
                                     tweet_mode='extended',
                                     q = 'to:{} -filter:retweets'.format(tweet.user.screen_name), 
                                     include_entities=False).items(100)
-                    '''
                     
+                    '''
                     replies = tweepy.Cursor(api.search,
                                         q='to:{} -filter:retweets'.format(tweet.user.screen_name),
                                         tweet_mode='extended').items(10)

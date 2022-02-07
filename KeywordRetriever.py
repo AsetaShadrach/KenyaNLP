@@ -17,6 +17,7 @@ def main(api_key, api_secret, access_token, access_token_secret):
 
         api.verify_credentials()
         logger.info("twitter_KE_NLP Running")
+        print("twitter_KE_NLP Running")
 
     
         for keyword_ in ['njaanuary', 'expressway', 'construction', 'mejja', 'masculinitysaturday']:
