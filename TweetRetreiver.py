@@ -61,6 +61,14 @@ if __name__ == '__main__':
     api_key = ""
     api_secret = ""
 
+    client_key = "MENja3RSXzhpNndiSEdkbFNIV206MTpjaQ"
+    client_secret = "I7tmkdx3rJxFaFiJK_IRDSM1vfpsT_6T3pk2T61JTLBfbpAIhL"
+
+    access_token = "2516700309-YpB2TBNJEisnbPh4PpwMIajcN1pL5GANmmIvskS"
+    access_token_secret = "YChK9NtBwCrC8CZAWp4VM9FXRKxzHCxM0sf5O0VKzENLK"
+
+    api_key = "c1tcgUSXhbVIHguXVWXvEJG0s"
+    api_secret = "W5D3mimyQM7IQyIiGPxKCtAUIOtsh9pJ4Ufj5HxijReUppQmOX"
 
     tweets_csv_file_path = "data/TweetsAndReplies.csv"
 

@@ -489,3 +489,11 @@ TypeError: 'NoneType' object is not iterable
 07-Feb-22 22:57:33 - TweetRetreival - INFO - Writing to data/TweetsAndReplies.csv ....
 07-Feb-22 22:57:43 - TweetRetreival - INFO - Number of entries added : 4
 07-Feb-22 22:57:43 - TweetRetreival - INFO - ID of last retrieved tweet: 1490776521555984389
+07-Feb-22 23:02:57 - TweetRetreival - INFO - twitter_KE_NLP Running
+07-Feb-22 23:02:57 - TweetRetreival - INFO - Writing to data/TweetsAndReplies.csv ....
+07-Feb-22 23:43:10 - TweetRetreival - INFO - Number of entries added : 2331
+07-Feb-22 23:43:10 - TweetRetreival - INFO - ID of last retrieved tweet: 1490776729429979145
+08-Feb-22 01:25:19 - TweetRetreival - INFO - twitter_KE_NLP Running
+08-Feb-22 01:25:20 - TweetRetreival - INFO - Writing to data/TweetsAndReplies.csv ....
+08-Feb-22 09:52:49 - TweetRetreival - INFO - Number of entries added : 27991
+08-Feb-22 09:52:49 - TweetRetreival - INFO - ID of last retrieved tweet: 1490776822400917508
