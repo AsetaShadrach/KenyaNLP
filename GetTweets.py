@@ -29,7 +29,7 @@ class CreateTweetsCsv():
 
         return write_to_file
 
-    def GetTweetsAndReplies(self, api):
+    def GetTweetsAndReplies(self, api, use_keywords=None):
         regex_str = "@\S*[^\s]|RT |\S*https?:\S*|(\n+)(?=.*)"
         pattern = re.compile(regex_str) 
 
@@ -41,17 +41,18 @@ class CreateTweetsCsv():
                 self.current_since_id = None
                 # Alter the number of items to be returned
                 for tweet in self.tweet_cursor.items():
-                    
-                    replies = tweepy.Cursor(api.search,  
-                                    tweet_mode='extended',
-                                    q = 'to:{} -filter:retweets'.format(tweet.user.screen_name), 
-                                    include_entities=False).items(100)
-                    
-                    '''
-                    replies = tweepy.Cursor(api.search,
-                                        q='to:{} -filter:retweets'.format(tweet.user.screen_name),
-                                        tweet_mode='extended').items(10)
-                    '''
+
+                    if use_keywords:
+                        replies = tweepy.Cursor(api.search,
+                                                q='to:{} -filter:retweets'.format(tweet.user.screen_name),
+                                                tweet_mode='extended').items(10)
+
+                    else:
+                        replies = tweepy.Cursor(api.search,
+                                                tweet_mode='extended',
+                                                q='to:{} -filter:retweets'.format(tweet.user.screen_name),
+                                                include_entities=False).items(100)
+
 
                     tweet_data = {"Tweet":[], "Reply":[]}
 

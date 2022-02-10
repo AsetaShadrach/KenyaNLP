@@ -497,3 +497,20 @@ TypeError: 'NoneType' object is not iterable
 08-Feb-22 01:25:20 - TweetRetreival - INFO - Writing to data/TweetsAndReplies.csv ....
 08-Feb-22 09:52:49 - TweetRetreival - INFO - Number of entries added : 27991
 08-Feb-22 09:52:49 - TweetRetreival - INFO - ID of last retrieved tweet: 1490776822400917508
+10-Feb-22 11:14:56 - KeywordRetrieval - INFO - twitter_KE_NLP Running
+10-Feb-22 11:14:56 - KeywordRetrieval - ERROR - GetTweetsAndReplies() got an unexpected keyword argument 'quoted'
+Traceback (most recent call last):
+  File "/home/lyrax/Projects/KenyaNLP/testKeywords.py", line 36, in main
+    make_csv.GetTweetsAndReplies(api, quoted='keywordretriever')
+TypeError: GetTweetsAndReplies() got an unexpected keyword argument 'quoted'
+10-Feb-22 11:24:22 - KeywordRetrieval - ERROR - invalid literal for int() with base 10: "'quoted'"
+10-Feb-22 11:24:22 - KeywordRetrieval - ERROR - The last line did not contain the Tweet ID for the last entry
+10-Feb-22 11:24:23 - KeywordRetrieval - INFO - twitter_KE_NLP Running
+10-Feb-22 11:24:23 - KeywordRetrieval - INFO - File created ...
+Writing to Keyword_njaanuary_AndReplies.csv ....
+10-Feb-22 11:26:09 - KeywordRetrieval - INFO - Number of entries added before KeybordInterrupt: 33
+10-Feb-22 11:26:09 - KeywordRetrieval - INFO - ID of last retrieved tweet before KeybordInterrupt: 1491385783596777472
+10-Feb-22 11:26:19 - KeywordRetrieval - INFO - twitter_KE_NLP Running
+10-Feb-22 11:26:19 - KeywordRetrieval - INFO - Writing to data/TweetsAndReplies.csv ....
+10-Feb-22 11:27:23 - KeywordRetrieval - INFO - Number of entries added before KeybordInterrupt: 0
+10-Feb-22 11:27:23 - KeywordRetrieval - INFO - ID of last retrieved tweet before KeybordInterrupt: 1491385783596777472
