@@ -514,3 +514,51 @@ Writing to Keyword_njaanuary_AndReplies.csv ....
 10-Feb-22 11:26:19 - KeywordRetrieval - INFO - Writing to data/TweetsAndReplies.csv ....
 10-Feb-22 11:27:23 - KeywordRetrieval - INFO - Number of entries added before KeybordInterrupt: 0
 10-Feb-22 11:27:23 - KeywordRetrieval - INFO - ID of last retrieved tweet before KeybordInterrupt: 1491385783596777472
+11-Feb-22 01:57:44 - KeywordRetrieval - ERROR - [{'code': 215, 'message': 'Bad Authentication data.'}]
+Traceback (most recent call last):
+  File "c:/Users/Aseta/Desktop/D S/ML_AI/Twitter app/KenyaNLP/TweetRetriever.py", line 20, in main
+    api.verify_credentials()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\api.py", line 605, in verify_credentials
+    )(**kargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 250, in _call
+    return method.execute()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 233, in execute
+    raise TweepError(error_msg, resp, api_code=api_error_code)
+tweepy.error.TweepError: [{'code': 215, 'message': 'Bad Authentication data.'}]
+11-Feb-22 01:57:44 - KeywordRetrieval - INFO - Number of entries added before the Error above: 0
+11-Feb-22 01:57:44 - KeywordRetrieval - INFO - ID of last retrieved tweet before the Error above: 1491385783596777472
+11-Feb-22 01:58:50 - KeywordRetrieval - INFO - twitter_KE_NLP Running
+11-Feb-22 01:58:50 - KeywordRetrieval - INFO - Writing to c:/Users/Aseta/Desktop/D S/ML_AI/Twitter app/TweetsAndReplies.csv ....
+11-Feb-22 01:58:56 - KeywordRetrieval - ERROR - local variable 'tweet_text' referenced before assignment
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\GetTweets.py", line 72, in GetTweetsAndReplies
+    if (tweet_text != None) & (reply_text != None):
+UnboundLocalError: local variable 'tweet_text' referenced before assignment
+11-Feb-22 01:58:57 - KeywordRetrieval - ERROR - local variable 'tweet_text' referenced before assignment
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\GetTweets.py", line 72, in GetTweetsAndReplies
+    if (tweet_text != None) & (reply_text != None):
+UnboundLocalError: local variable 'tweet_text' referenced before assignment
+11-Feb-22 02:04:03 - KeywordRetrieval - INFO - Number of entries added before KeybordInterrupt: 99
+11-Feb-22 02:04:03 - KeywordRetrieval - INFO - ID of last retrieved tweet before KeybordInterrupt: 1491906042162200578
+11-Feb-22 02:09:28 - KeywordRetrieval - INFO - twitter_KE_NLP Running
+11-Feb-22 02:09:28 - KeywordRetrieval - INFO - Writing to c:/Users/Aseta/Desktop/D S/ML_AI/Twitter app/TweetsAndReplies.csv ....
+11-Feb-22 02:09:53 - KeywordRetrieval - INFO - Number of entries added before KeybordInterrupt: 0
+11-Feb-22 02:09:53 - KeywordRetrieval - INFO - ID of last retrieved tweet before KeybordInterrupt: 1491906042162200578
+11-Feb-22 02:11:27 - KeywordRetrieval - INFO - twitter_KE_NLP Running
+11-Feb-22 02:11:27 - KeywordRetrieval - INFO - Writing to file ....
+11-Feb-22 02:12:50 - KeywordRetrieval - INFO - Number of entries added before KeybordInterrupt: 0
+11-Feb-22 02:12:50 - KeywordRetrieval - INFO - ID of last retrieved tweet before KeybordInterrupt: 1491906042162200578
+11-Feb-22 02:13:22 - KeywordRetrieval - ERROR - [{'code': 215, 'message': 'Bad Authentication data.'}]
+Traceback (most recent call last):
+  File "c:/Users/Aseta/Desktop/D S/ML_AI/Twitter app/KenyaNLP/TweetRetriever.py", line 20, in main
+    api.verify_credentials()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\api.py", line 605, in verify_credentials
+    )(**kargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 250, in _call
+    return method.execute()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 233, in execute
+    raise TweepError(error_msg, resp, api_code=api_error_code)
+tweepy.error.TweepError: [{'code': 215, 'message': 'Bad Authentication data.'}]
+11-Feb-22 02:13:22 - KeywordRetrieval - INFO - Number of entries added before the Error above: 0
+11-Feb-22 02:13:22 - KeywordRetrieval - INFO - ID of last retrieved tweet before the Error above: 1491906042162200578

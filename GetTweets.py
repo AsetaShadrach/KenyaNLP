@@ -16,7 +16,7 @@ class CreateTweetsCsv():
     def MakeCsvFile(self) -> bool:
         write_to_file = False
         if os.path.exists(self.tweets_csv_file_path):
-            self.logger.info("Writing to "+self.tweets_csv_file_path+" ....")
+            self.logger.info("Writing to file(s) ....")
             write_to_file=True
         else:
             with open(self.tweets_csv_file_path,"a+") as tweets_csv_file:
@@ -25,7 +25,7 @@ class CreateTweetsCsv():
                 self.logger.info("File created ...\nWriting to file(s) ....")
                 write_to_file = True
 
-        print("Writing to file ....")
+        print("Writing to file(s) ....")
 
         return write_to_file
 
@@ -38,7 +38,7 @@ class CreateTweetsCsv():
             # Find the replies
             try:
                 self.records_added = 0
-                self.current_since_id = None
+                self.current_since_id,tweet_text,reply_text= None,None,None
                 # Alter the number of items to be returned
                 for tweet in self.tweet_cursor.items():
 
@@ -91,6 +91,12 @@ class CreateTweetsCsv():
                     
                     except Exception as e:
                         self.logger.exception(e)
+                        self.logger.info("Number of entries added : "+str(self.records_added))
+                        if self.current_since_id:
+                            self.logger.info("ID of last retrieved tweet before the error above: "+str(self.current_since_id ))
+                        else:
+                            # If it hasn't completed the loop successfully even once
+                            self.logger.info("ID of last retrieved tweet before the error above: "+str(self.last_id_logged ))
 
 
                 self.logger.info("Number of entries added : "+str(self.records_added))
