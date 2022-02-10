@@ -22,7 +22,7 @@ class CreateTweetsCsv():
             with open(self.tweets_csv_file_path,"a+") as tweets_csv_file:
                 writer = csv.DictWriter(tweets_csv_file,fieldnames=["Tweet","Reply"])
                 writer.writeheader()
-                self.logger.info("File created ...\nWriting to "+self.tweets_csv_file_path+" ....")
+                self.logger.info("File created ...\nWriting to file(s) ....")
                 write_to_file = True
 
         print("Writing to file ....")
