@@ -657,3 +657,5 @@ tweepy.error.TweepError: Failed to send request: HTTPSConnectionPool(host='api.t
 12-Feb-22 02:14:01 - KeywordRetrieval - INFO - ID of last retrieved tweet: 1492139181316968452
 12-Feb-22 02:15:19 - KeywordRetrieval - INFO - twitter_KE_NLP Running
 12-Feb-22 02:15:19 - KeywordRetrieval - INFO - Writing to file(s) ....
+12-Feb-22 03:24:32 - KeywordRetrieval - INFO - Number of entries added before KeybordInterrupt: 2375
+12-Feb-22 03:24:32 - KeywordRetrieval - INFO - ID of last retrieved tweet before KeybordInterrupt: 1492260929651752961
