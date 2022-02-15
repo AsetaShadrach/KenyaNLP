@@ -74,12 +74,6 @@ if __name__ == '__main__':
     api_key = ""
     api_secret = ""
     
-    access_token = "2516700309-YpB2TBNJEisnbPh4PpwMIajcN1pL5GANmmIvskS"
-    access_token_secret = "YChK9NtBwCrC8CZAWp4VM9FXRKxzHCxM0sf5O0VKzENLK"
-
-    api_key = "c1tcgUSXhbVIHguXVWXvEJG0s"
-    api_secret = "W5D3mimyQM7IQyIiGPxKCtAUIOtsh9pJ4Ufj5HxijReUppQmOX"
-    
     to_run = 'keyword'
 
     tweets_csv_file_path = "c:/Users/Aseta/Desktop/D S/ML_AI/Twitter app/TweetsAndReplies.csv"
