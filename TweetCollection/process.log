@@ -659,3 +659,699 @@ tweepy.error.TweepError: Failed to send request: HTTPSConnectionPool(host='api.t
 12-Feb-22 02:15:19 - KeywordRetrieval - INFO - Writing to file(s) ....
 12-Feb-22 03:24:32 - KeywordRetrieval - INFO - Number of entries added before KeybordInterrupt: 2375
 12-Feb-22 03:24:32 - KeywordRetrieval - INFO - ID of last retrieved tweet before KeybordInterrupt: 1492260929651752961
+12-Feb-22 03:31:22 - KeywordRetrieval - ERROR - [Errno 2] No such file or directory: 'process.log'
+12-Feb-22 03:31:22 - KeywordRetrieval - ERROR - The last line did not contain the Tweet ID for the last entry
+12-Feb-22 03:31:23 - KeywordRetrieval - INFO - twitter_KE_NLP Running
+12-Feb-22 03:31:23 - KeywordRetrieval - INFO - Writing to file(s) ....
+12-Feb-22 03:40:25 - KeywordRetrieval - INFO - Number of entries added before KeybordInterrupt: 256
+12-Feb-22 03:40:25 - KeywordRetrieval - INFO - ID of last retrieved tweet before KeybordInterrupt: 1492294167774609408
+12-Feb-22 03:42:35 - KeywordRetrieval - INFO - twitter_KE_NLP Running
+12-Feb-22 03:42:35 - KeywordRetrieval - INFO - Writing to file(s) ....
+12-Feb-22 03:49:19 - KeywordRetrieval - INFO - Number of entries added : 256
+12-Feb-22 03:49:19 - KeywordRetrieval - INFO - ID of last retrieved tweet: 1492294323328765952
+12-Feb-22 08:12:46 - KeywordRetrieval - INFO - twitter_KE_NLP Running
+12-Feb-22 08:12:46 - KeywordRetrieval - INFO - Writing to file(s) ....
+12-Feb-22 12:05:31 - KeywordRetrieval - ERROR - Failed to send request: HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/home_timeline.json?max_id=1492345271061262342&include_rts=True&since_id=1492294323328765952&include_entities=False&count=200 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001B441241388>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+Traceback (most recent call last):
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Aseta\Anaconda3\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000001B441241388>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\util\retry.py", line 399, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/home_timeline.json?max_id=1492345271061262342&include_rts=True&since_id=1492294323328765952&include_entities=False&count=200 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001B441241388>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 189, in execute
+    proxies=self.api.proxy)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/home_timeline.json?max_id=1492345271061262342&include_rts=True&since_id=1492294323328765952&include_entities=False&count=200 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001B441241388>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:/Users/Aseta/Desktop/D S/ML_AI/Twitter app/KenyaNLP/TweetCollection/TweetRetriever.py", line 51, in main
+    make_csv.GetTweetsAndReplies(api)
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 43, in GetTweetsAndReplies
+    for tweet in self.tweet_cursor.items():
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\cursor.py", line 47, in __next__
+    return self.next()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\cursor.py", line 195, in next
+    self.current_page = self.page_iterator.next()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\cursor.py", line 106, in next
+    data = self.method(max_id=self.max_id, parser=RawParser(), *self.args, **self.kargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 250, in _call
+    return method.execute()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 191, in execute
+    six.reraise(TweepError, TweepError('Failed to send request: %s' % e), sys.exc_info()[2])
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\six.py", line 692, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 189, in execute
+    proxies=self.api.proxy)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+tweepy.error.TweepError: Failed to send request: HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/home_timeline.json?max_id=1492345271061262342&include_rts=True&since_id=1492294323328765952&include_entities=False&count=200 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001B441241388>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+12-Feb-22 12:05:32 - KeywordRetrieval - INFO - Number of entries added before the Error above: 6837
+12-Feb-22 12:05:32 - KeywordRetrieval - INFO - ID of last retrieved tweet before the Error above: 1492360107165949956
+12-Feb-22 12:36:32 - KeywordRetrieval - INFO - twitter_KE_NLP Running
+12-Feb-22 12:36:32 - KeywordRetrieval - INFO - Writing to file(s) ....
+12-Feb-22 16:58:24 - KeywordRetrieval - ERROR - Failed to send request: HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/home_timeline.json?max_id=1492418877367664643&include_rts=True&since_id=1492360107165949956&include_entities=False&count=200 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x00000258F302B888>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+Traceback (most recent call last):
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Aseta\Anaconda3\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x00000258F302B888>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\util\retry.py", line 399, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/home_timeline.json?max_id=1492418877367664643&include_rts=True&since_id=1492360107165949956&include_entities=False&count=200 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x00000258F302B888>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 189, in execute
+    proxies=self.api.proxy)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/home_timeline.json?max_id=1492418877367664643&include_rts=True&since_id=1492360107165949956&include_entities=False&count=200 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x00000258F302B888>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:/Users/Aseta/Desktop/D S/ML_AI/Twitter app/KenyaNLP/TweetCollection/TweetRetriever.py", line 51, in main
+    make_csv.GetTweetsAndReplies(api)
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 43, in GetTweetsAndReplies
+    for tweet in self.tweet_cursor.items():
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\cursor.py", line 47, in __next__
+    return self.next()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\cursor.py", line 195, in next
+    self.current_page = self.page_iterator.next()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\cursor.py", line 106, in next
+    data = self.method(max_id=self.max_id, parser=RawParser(), *self.args, **self.kargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 250, in _call
+    return method.execute()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 191, in execute
+    six.reraise(TweepError, TweepError('Failed to send request: %s' % e), sys.exc_info()[2])
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\six.py", line 692, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 189, in execute
+    proxies=self.api.proxy)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+tweepy.error.TweepError: Failed to send request: HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/home_timeline.json?max_id=1492418877367664643&include_rts=True&since_id=1492360107165949956&include_entities=False&count=200 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x00000258F302B888>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+12-Feb-22 16:58:24 - KeywordRetrieval - INFO - Number of entries added before the Error above: 6343
+12-Feb-22 16:58:24 - KeywordRetrieval - INFO - ID of last retrieved tweet before the Error above: 1492425154068193282
+14-Feb-22 01:31:51 - KeywordRetrieval - INFO - twitter_KE_NLP Running
+14-Feb-22 01:31:51 - KeywordRetrieval - INFO - Writing to file(s) ....
+14-Feb-22 02:03:10 - KeywordRetrieval - ERROR - Failed to send request: HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/home_timeline.json?max_id=1492950300059131905&include_rts=True&since_id=1492425154068193282&include_entities=False&count=200 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000015E9989E5C8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+Traceback (most recent call last):
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Aseta\Anaconda3\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x0000015E9989E5C8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\util\retry.py", line 399, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/home_timeline.json?max_id=1492950300059131905&include_rts=True&since_id=1492425154068193282&include_entities=False&count=200 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000015E9989E5C8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 189, in execute
+    proxies=self.api.proxy)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/home_timeline.json?max_id=1492950300059131905&include_rts=True&since_id=1492425154068193282&include_entities=False&count=200 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000015E9989E5C8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:/Users/Aseta/Desktop/D S/ML_AI/Twitter app/KenyaNLP/TweetCollection/TweetRetriever.py", line 51, in main
+    make_csv.GetTweetsAndReplies(api)
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 43, in GetTweetsAndReplies
+    for tweet in self.tweet_cursor.items():
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\cursor.py", line 47, in __next__
+    return self.next()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\cursor.py", line 195, in next
+    self.current_page = self.page_iterator.next()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\cursor.py", line 106, in next
+    data = self.method(max_id=self.max_id, parser=RawParser(), *self.args, **self.kargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 250, in _call
+    return method.execute()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 191, in execute
+    six.reraise(TweepError, TweepError('Failed to send request: %s' % e), sys.exc_info()[2])
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\six.py", line 692, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 189, in execute
+    proxies=self.api.proxy)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+tweepy.error.TweepError: Failed to send request: HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/home_timeline.json?max_id=1492950300059131905&include_rts=True&since_id=1492425154068193282&include_entities=False&count=200 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000015E9989E5C8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+14-Feb-22 02:03:13 - KeywordRetrieval - INFO - Number of entries added before the Error above: 670
+14-Feb-22 02:03:13 - KeywordRetrieval - INFO - ID of last retrieved tweet before the Error above: 1492987893421387777
+14-Feb-22 02:04:02 - KeywordRetrieval - INFO - twitter_KE_NLP Running
+14-Feb-22 02:04:02 - KeywordRetrieval - INFO - Writing to file(s) ....
+14-Feb-22 03:02:31 - KeywordRetrieval - INFO - Number of entries added : 1747
+14-Feb-22 03:02:31 - KeywordRetrieval - INFO - ID of last retrieved tweet: 1492988484008751114
+14-Feb-22 10:55:18 - KeywordRetrieval - INFO - twitter_KE_NLP Running
+14-Feb-22 10:55:18 - KeywordRetrieval - INFO - Writing to file(s) ....
+14-Feb-22 11:03:29 - KeywordRetrieval - ERROR - 'Status' object has no attribute 'text'
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 62, in GetTweetsAndReplies
+    tweet_text = pattern.sub('', tweet.text)
+AttributeError: 'Status' object has no attribute 'text'
+14-Feb-22 11:03:29 - KeywordRetrieval - INFO - Number of entries added : 337
+14-Feb-22 11:03:29 - KeywordRetrieval - INFO - ID of last retrieved tweet before the error above: 1493131524841132032
+14-Feb-22 11:17:28 - KeywordRetrieval - ERROR - 'Status' object has no attribute 'text'
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 62, in GetTweetsAndReplies
+    tweet_text = pattern.sub('', tweet.text)
+AttributeError: 'Status' object has no attribute 'text'
+14-Feb-22 11:17:28 - KeywordRetrieval - INFO - Number of entries added : 809
+14-Feb-22 11:17:28 - KeywordRetrieval - INFO - ID of last retrieved tweet before the error above: 1493131243499798528
+14-Feb-22 11:20:50 - KeywordRetrieval - ERROR - 'Status' object has no attribute 'text'
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 62, in GetTweetsAndReplies
+    tweet_text = pattern.sub('', tweet.text)
+AttributeError: 'Status' object has no attribute 'text'
+14-Feb-22 11:20:50 - KeywordRetrieval - INFO - Number of entries added : 906
+14-Feb-22 11:20:50 - KeywordRetrieval - INFO - ID of last retrieved tweet before the error above: 1493131191054123010
+14-Feb-22 11:20:52 - KeywordRetrieval - ERROR - 'Status' object has no attribute 'text'
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 62, in GetTweetsAndReplies
+    tweet_text = pattern.sub('', tweet.text)
+AttributeError: 'Status' object has no attribute 'text'
+14-Feb-22 11:20:52 - KeywordRetrieval - INFO - Number of entries added : 906
+14-Feb-22 11:20:52 - KeywordRetrieval - INFO - ID of last retrieved tweet before the error above: 1493131191054123010
+14-Feb-22 11:39:36 - KeywordRetrieval - ERROR - 'Status' object has no attribute 'text'
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 62, in GetTweetsAndReplies
+    tweet_text = pattern.sub('', tweet.text)
+AttributeError: 'Status' object has no attribute 'text'
+14-Feb-22 11:39:36 - KeywordRetrieval - INFO - Number of entries added : 1402
+14-Feb-22 11:39:36 - KeywordRetrieval - INFO - ID of last retrieved tweet before the error above: 1493130836027265025
+14-Feb-22 11:39:38 - KeywordRetrieval - ERROR - 'Status' object has no attribute 'text'
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 62, in GetTweetsAndReplies
+    tweet_text = pattern.sub('', tweet.text)
+AttributeError: 'Status' object has no attribute 'text'
+14-Feb-22 11:39:38 - KeywordRetrieval - INFO - Number of entries added : 1402
+14-Feb-22 11:39:38 - KeywordRetrieval - INFO - ID of last retrieved tweet before the error above: 1493130836027265025
+14-Feb-22 12:11:01 - KeywordRetrieval - ERROR - 'Status' object has no attribute 'text'
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 62, in GetTweetsAndReplies
+    tweet_text = pattern.sub('', tweet.text)
+AttributeError: 'Status' object has no attribute 'text'
+14-Feb-22 12:11:01 - KeywordRetrieval - INFO - Number of entries added : 2466
+14-Feb-22 12:11:01 - KeywordRetrieval - INFO - ID of last retrieved tweet before the error above: 1493130557370294276
+14-Feb-22 12:14:30 - KeywordRetrieval - ERROR - 'Status' object has no attribute 'text'
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 62, in GetTweetsAndReplies
+    tweet_text = pattern.sub('', tweet.text)
+AttributeError: 'Status' object has no attribute 'text'
+14-Feb-22 12:14:30 - KeywordRetrieval - INFO - Number of entries added : 2566
+14-Feb-22 12:14:30 - KeywordRetrieval - INFO - ID of last retrieved tweet before the error above: 1493130526244409347
+14-Feb-22 12:26:41 - KeywordRetrieval - ERROR - 'Status' object has no attribute 'text'
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 62, in GetTweetsAndReplies
+    tweet_text = pattern.sub('', tweet.text)
+AttributeError: 'Status' object has no attribute 'text'
+14-Feb-22 12:26:41 - KeywordRetrieval - INFO - Number of entries added : 2987
+14-Feb-22 12:26:41 - KeywordRetrieval - INFO - ID of last retrieved tweet before the error above: 1493130323001028608
+14-Feb-22 12:26:49 - KeywordRetrieval - ERROR - 'Status' object has no attribute 'text'
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 62, in GetTweetsAndReplies
+    tweet_text = pattern.sub('', tweet.text)
+AttributeError: 'Status' object has no attribute 'text'
+14-Feb-22 12:26:49 - KeywordRetrieval - INFO - Number of entries added : 2987
+14-Feb-22 12:26:49 - KeywordRetrieval - INFO - ID of last retrieved tweet before the error above: 1493130323001028608
+14-Feb-22 12:54:54 - KeywordRetrieval - ERROR - 'Status' object has no attribute 'text'
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 62, in GetTweetsAndReplies
+    tweet_text = pattern.sub('', tweet.text)
+AttributeError: 'Status' object has no attribute 'text'
+14-Feb-22 12:54:54 - KeywordRetrieval - INFO - Number of entries added : 3808
+14-Feb-22 12:54:54 - KeywordRetrieval - INFO - ID of last retrieved tweet before the error above: 1493129682459541504
+14-Feb-22 13:20:28 - KeywordRetrieval - ERROR - 'Status' object has no attribute 'text'
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 62, in GetTweetsAndReplies
+    tweet_text = pattern.sub('', tweet.text)
+AttributeError: 'Status' object has no attribute 'text'
+14-Feb-22 13:20:28 - KeywordRetrieval - INFO - Number of entries added : 4538
+14-Feb-22 13:20:28 - KeywordRetrieval - INFO - ID of last retrieved tweet before the error above: 1493129258465734657
+14-Feb-22 13:22:45 - KeywordRetrieval - ERROR - 'Status' object has no attribute 'text'
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 62, in GetTweetsAndReplies
+    tweet_text = pattern.sub('', tweet.text)
+AttributeError: 'Status' object has no attribute 'text'
+14-Feb-22 13:22:45 - KeywordRetrieval - INFO - Number of entries added : 4538
+14-Feb-22 13:22:45 - KeywordRetrieval - INFO - ID of last retrieved tweet before the error above: 1493129258465734657
+14-Feb-22 13:22:48 - KeywordRetrieval - ERROR - 'Status' object has no attribute 'text'
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 62, in GetTweetsAndReplies
+    tweet_text = pattern.sub('', tweet.text)
+AttributeError: 'Status' object has no attribute 'text'
+14-Feb-22 13:22:48 - KeywordRetrieval - INFO - Number of entries added : 4538
+14-Feb-22 13:22:48 - KeywordRetrieval - INFO - ID of last retrieved tweet before the error above: 1493129258465734657
+14-Feb-22 13:26:24 - KeywordRetrieval - ERROR - 'Status' object has no attribute 'text'
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 62, in GetTweetsAndReplies
+    tweet_text = pattern.sub('', tweet.text)
+AttributeError: 'Status' object has no attribute 'text'
+14-Feb-22 13:26:24 - KeywordRetrieval - INFO - Number of entries added : 4637
+14-Feb-22 13:26:24 - KeywordRetrieval - INFO - ID of last retrieved tweet before the error above: 1493129082225242115
+14-Feb-22 13:36:37 - KeywordRetrieval - ERROR - 'Status' object has no attribute 'text'
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 62, in GetTweetsAndReplies
+    tweet_text = pattern.sub('', tweet.text)
+AttributeError: 'Status' object has no attribute 'text'
+14-Feb-22 13:36:37 - KeywordRetrieval - INFO - Number of entries added : 4906
+14-Feb-22 13:36:37 - KeywordRetrieval - INFO - ID of last retrieved tweet before the error above: 1493128945293791232
+14-Feb-22 13:38:02 - KeywordRetrieval - ERROR - 'Status' object has no attribute 'text'
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 62, in GetTweetsAndReplies
+    tweet_text = pattern.sub('', tweet.text)
+AttributeError: 'Status' object has no attribute 'text'
+14-Feb-22 13:38:02 - KeywordRetrieval - INFO - Number of entries added : 4906
+14-Feb-22 13:38:02 - KeywordRetrieval - INFO - ID of last retrieved tweet before the error above: 1493128945293791232
+14-Feb-22 13:41:29 - KeywordRetrieval - ERROR - 'Status' object has no attribute 'text'
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 62, in GetTweetsAndReplies
+    tweet_text = pattern.sub('', tweet.text)
+AttributeError: 'Status' object has no attribute 'text'
+14-Feb-22 13:41:29 - KeywordRetrieval - INFO - Number of entries added : 5006
+14-Feb-22 13:41:29 - KeywordRetrieval - INFO - ID of last retrieved tweet before the error above: 1493128602132656129
+14-Feb-22 14:05:56 - KeywordRetrieval - ERROR - 'Status' object has no attribute 'text'
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 62, in GetTweetsAndReplies
+    tweet_text = pattern.sub('', tweet.text)
+AttributeError: 'Status' object has no attribute 'text'
+14-Feb-22 14:05:56 - KeywordRetrieval - INFO - Number of entries added : 5719
+14-Feb-22 14:05:56 - KeywordRetrieval - INFO - ID of last retrieved tweet before the error above: 1493128337090387975
+14-Feb-22 14:20:02 - KeywordRetrieval - ERROR - 'Status' object has no attribute 'text'
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 62, in GetTweetsAndReplies
+    tweet_text = pattern.sub('', tweet.text)
+AttributeError: 'Status' object has no attribute 'text'
+14-Feb-22 14:20:02 - KeywordRetrieval - INFO - Number of entries added : 5969
+14-Feb-22 14:20:02 - KeywordRetrieval - INFO - ID of last retrieved tweet before the error above: 1493128156127145984
+14-Feb-22 14:20:12 - KeywordRetrieval - ERROR - 'Status' object has no attribute 'text'
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 62, in GetTweetsAndReplies
+    tweet_text = pattern.sub('', tweet.text)
+AttributeError: 'Status' object has no attribute 'text'
+14-Feb-22 14:20:12 - KeywordRetrieval - INFO - Number of entries added : 5969
+14-Feb-22 14:20:12 - KeywordRetrieval - INFO - ID of last retrieved tweet before the error above: 1493128156127145984
+14-Feb-22 14:24:09 - KeywordRetrieval - ERROR - 'Status' object has no attribute 'text'
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 62, in GetTweetsAndReplies
+    tweet_text = pattern.sub('', tweet.text)
+AttributeError: 'Status' object has no attribute 'text'
+14-Feb-22 14:24:09 - KeywordRetrieval - INFO - Number of entries added : 6038
+14-Feb-22 14:24:09 - KeywordRetrieval - INFO - ID of last retrieved tweet before the error above: 1493128031652696067
+14-Feb-22 14:54:06 - KeywordRetrieval - ERROR - 'Status' object has no attribute 'text'
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 62, in GetTweetsAndReplies
+    tweet_text = pattern.sub('', tweet.text)
+AttributeError: 'Status' object has no attribute 'text'
+14-Feb-22 14:54:06 - KeywordRetrieval - INFO - Number of entries added : 6788
+14-Feb-22 14:54:06 - KeywordRetrieval - INFO - ID of last retrieved tweet before the error above: 1493127644203950083
+14-Feb-22 15:08:44 - KeywordRetrieval - ERROR - 'Status' object has no attribute 'text'
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 62, in GetTweetsAndReplies
+    tweet_text = pattern.sub('', tweet.text)
+AttributeError: 'Status' object has no attribute 'text'
+14-Feb-22 15:08:44 - KeywordRetrieval - INFO - Number of entries added : 7160
+14-Feb-22 15:08:44 - KeywordRetrieval - INFO - ID of last retrieved tweet before the error above: 1493127311402717187
+14-Feb-22 15:15:12 - KeywordRetrieval - ERROR - 'Status' object has no attribute 'text'
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 62, in GetTweetsAndReplies
+    tweet_text = pattern.sub('', tweet.text)
+AttributeError: 'Status' object has no attribute 'text'
+14-Feb-22 15:15:12 - KeywordRetrieval - INFO - Number of entries added : 7353
+14-Feb-22 15:15:12 - KeywordRetrieval - INFO - ID of last retrieved tweet before the error above: 1493127235892649993
+14-Feb-22 15:25:42 - KeywordRetrieval - ERROR - 'Status' object has no attribute 'text'
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 62, in GetTweetsAndReplies
+    tweet_text = pattern.sub('', tweet.text)
+AttributeError: 'Status' object has no attribute 'text'
+14-Feb-22 15:25:42 - KeywordRetrieval - INFO - Number of entries added : 7622
+14-Feb-22 15:25:42 - KeywordRetrieval - INFO - ID of last retrieved tweet before the error above: 1493127122445086725
+14-Feb-22 15:38:17 - KeywordRetrieval - ERROR - 'Status' object has no attribute 'text'
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 62, in GetTweetsAndReplies
+    tweet_text = pattern.sub('', tweet.text)
+AttributeError: 'Status' object has no attribute 'text'
+14-Feb-22 15:38:17 - KeywordRetrieval - INFO - Number of entries added : 7983
+14-Feb-22 15:38:17 - KeywordRetrieval - INFO - ID of last retrieved tweet before the error above: 1493126804680359937
+14-Feb-22 15:53:17 - KeywordRetrieval - ERROR - 'Status' object has no attribute 'text'
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 62, in GetTweetsAndReplies
+    tweet_text = pattern.sub('', tweet.text)
+AttributeError: 'Status' object has no attribute 'text'
+14-Feb-22 15:53:17 - KeywordRetrieval - INFO - Number of entries added : 8450
+14-Feb-22 15:53:17 - KeywordRetrieval - INFO - ID of last retrieved tweet before the error above: 1493126631556358146
+14-Feb-22 16:27:40 - KeywordRetrieval - ERROR - 'Status' object has no attribute 'text'
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 62, in GetTweetsAndReplies
+    tweet_text = pattern.sub('', tweet.text)
+AttributeError: 'Status' object has no attribute 'text'
+14-Feb-22 16:27:40 - KeywordRetrieval - INFO - Number of entries added : 9459
+14-Feb-22 16:27:40 - KeywordRetrieval - INFO - ID of last retrieved tweet before the error above: 1493126221290422273
+14-Feb-22 16:36:40 - KeywordRetrieval - ERROR - 'Status' object has no attribute 'text'
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 62, in GetTweetsAndReplies
+    tweet_text = pattern.sub('', tweet.text)
+AttributeError: 'Status' object has no attribute 'text'
+14-Feb-22 16:36:40 - KeywordRetrieval - INFO - Number of entries added : 9646
+14-Feb-22 16:36:40 - KeywordRetrieval - INFO - ID of last retrieved tweet before the error above: 1493126062670331906
+14-Feb-22 16:45:06 - KeywordRetrieval - ERROR - 'Status' object has no attribute 'text'
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 62, in GetTweetsAndReplies
+    tweet_text = pattern.sub('', tweet.text)
+AttributeError: 'Status' object has no attribute 'text'
+14-Feb-22 16:45:06 - KeywordRetrieval - INFO - Number of entries added : 9912
+14-Feb-22 16:45:06 - KeywordRetrieval - INFO - ID of last retrieved tweet before the error above: 1493125807216156672
+14-Feb-22 17:01:30 - KeywordRetrieval - ERROR - 'Status' object has no attribute 'text'
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 62, in GetTweetsAndReplies
+    tweet_text = pattern.sub('', tweet.text)
+AttributeError: 'Status' object has no attribute 'text'
+14-Feb-22 17:01:30 - KeywordRetrieval - INFO - Number of entries added : 10288
+14-Feb-22 17:01:30 - KeywordRetrieval - INFO - ID of last retrieved tweet before the error above: 1493125700970332160
+14-Feb-22 17:06:01 - KeywordRetrieval - ERROR - 'Status' object has no attribute 'text'
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 62, in GetTweetsAndReplies
+    tweet_text = pattern.sub('', tweet.text)
+AttributeError: 'Status' object has no attribute 'text'
+14-Feb-22 17:06:01 - KeywordRetrieval - INFO - Number of entries added : 10288
+14-Feb-22 17:06:01 - KeywordRetrieval - INFO - ID of last retrieved tweet before the error above: 1493125700970332160
+14-Feb-22 17:09:01 - KeywordRetrieval - ERROR - 'Status' object has no attribute 'text'
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 62, in GetTweetsAndReplies
+    tweet_text = pattern.sub('', tweet.text)
+AttributeError: 'Status' object has no attribute 'text'
+14-Feb-22 17:09:01 - KeywordRetrieval - INFO - Number of entries added : 10370
+14-Feb-22 17:09:01 - KeywordRetrieval - INFO - ID of last retrieved tweet before the error above: 1493125483155927040
+14-Feb-22 17:19:07 - KeywordRetrieval - ERROR - 'Status' object has no attribute 'text'
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 62, in GetTweetsAndReplies
+    tweet_text = pattern.sub('', tweet.text)
+AttributeError: 'Status' object has no attribute 'text'
+14-Feb-22 17:19:07 - KeywordRetrieval - INFO - Number of entries added : 10651
+14-Feb-22 17:19:07 - KeywordRetrieval - INFO - ID of last retrieved tweet before the error above: 1493125381188108289
+14-Feb-22 17:19:11 - KeywordRetrieval - ERROR - 'Status' object has no attribute 'text'
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 62, in GetTweetsAndReplies
+    tweet_text = pattern.sub('', tweet.text)
+AttributeError: 'Status' object has no attribute 'text'
+14-Feb-22 17:19:11 - KeywordRetrieval - INFO - Number of entries added : 10651
+14-Feb-22 17:19:11 - KeywordRetrieval - INFO - ID of last retrieved tweet before the error above: 1493125381188108289
+14-Feb-22 17:25:52 - KeywordRetrieval - ERROR - 'Status' object has no attribute 'text'
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 62, in GetTweetsAndReplies
+    tweet_text = pattern.sub('', tweet.text)
+AttributeError: 'Status' object has no attribute 'text'
+14-Feb-22 17:25:52 - KeywordRetrieval - INFO - Number of entries added : 10832
+14-Feb-22 17:25:52 - KeywordRetrieval - INFO - ID of last retrieved tweet before the error above: 1493125297843187714
+14-Feb-22 17:28:43 - KeywordRetrieval - ERROR - 'Status' object has no attribute 'text'
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 62, in GetTweetsAndReplies
+    tweet_text = pattern.sub('', tweet.text)
+AttributeError: 'Status' object has no attribute 'text'
+14-Feb-22 17:28:43 - KeywordRetrieval - INFO - Number of entries added : 10915
+14-Feb-22 17:28:43 - KeywordRetrieval - INFO - ID of last retrieved tweet before the error above: 1493125218117820417
+14-Feb-22 17:52:20 - KeywordRetrieval - ERROR - 'Status' object has no attribute 'text'
+Traceback (most recent call last):
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 62, in GetTweetsAndReplies
+    tweet_text = pattern.sub('', tweet.text)
+AttributeError: 'Status' object has no attribute 'text'
+14-Feb-22 17:52:20 - KeywordRetrieval - INFO - Number of entries added : 11567
+14-Feb-22 17:52:20 - KeywordRetrieval - INFO - ID of last retrieved tweet before the error above: 1493124933446254592
+14-Feb-22 17:54:56 - KeywordRetrieval - INFO - Number of entries added : 11666
+14-Feb-22 17:54:56 - KeywordRetrieval - INFO - ID of last retrieved tweet: 1493124850877087744
+14-Feb-22 18:56:24 - TweetRetrieval - INFO - twitter_KE_NLP Running
+14-Feb-22 18:56:24 - TweetRetrieval - INFO - Writing to file(s) ....
+14-Feb-22 23:04:05 - TweetRetrieval - ERROR - Failed to send request: HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/home_timeline.json?max_id=1493241407968092161&include_rts=True&since_id=1493124850877087744&include_entities=False&tweet_mode=extended&count=200 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002124FD4B088>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+Traceback (most recent call last):
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Aseta\Anaconda3\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000002124FD4B088>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\util\retry.py", line 399, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/home_timeline.json?max_id=1493241407968092161&include_rts=True&since_id=1493124850877087744&include_entities=False&tweet_mode=extended&count=200 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002124FD4B088>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 189, in execute
+    proxies=self.api.proxy)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/home_timeline.json?max_id=1493241407968092161&include_rts=True&since_id=1493124850877087744&include_entities=False&tweet_mode=extended&count=200 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002124FD4B088>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:/Users/Aseta/Desktop/D S/ML_AI/Twitter app/KenyaNLP/TweetCollection/TweetRetriever.py", line 52, in main
+    make_csv.GetTweetsAndReplies(api)
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 43, in GetTweetsAndReplies
+    for tweet in self.tweet_cursor.items():
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\cursor.py", line 47, in __next__
+    return self.next()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\cursor.py", line 195, in next
+    self.current_page = self.page_iterator.next()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\cursor.py", line 106, in next
+    data = self.method(max_id=self.max_id, parser=RawParser(), *self.args, **self.kargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 250, in _call
+    return method.execute()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 191, in execute
+    six.reraise(TweepError, TweepError('Failed to send request: %s' % e), sys.exc_info()[2])
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\six.py", line 692, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 189, in execute
+    proxies=self.api.proxy)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+tweepy.error.TweepError: Failed to send request: HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/home_timeline.json?max_id=1493241407968092161&include_rts=True&since_id=1493124850877087744&include_entities=False&tweet_mode=extended&count=200 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000002124FD4B088>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+14-Feb-22 23:04:06 - TweetRetrieval - INFO - Number of entries added before the Error above: 6473
+14-Feb-22 23:04:06 - TweetRetrieval - INFO - ID of last retrieved tweet before the Error above: 1493248935045079043
+15-Feb-22 01:37:08 - TweetRetrieval - INFO - twitter_KE_NLP Running
+15-Feb-22 01:37:08 - TweetRetrieval - INFO - Writing to file(s) ....
+15-Feb-22 10:34:49 - TweetRetrieval - ERROR - Failed to send request: HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/home_timeline.json?max_id=1493325060660158468&include_rts=True&since_id=1493248935045079043&include_entities=False&tweet_mode=extended&count=200 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000015BCF686148>: Failed to establish a new connection: [WinError 10051] A socket operation was attempted to an unreachable network'))
+Traceback (most recent call last):
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\util\connection.py", line 80, in create_connection
+    raise err
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\util\connection.py", line 70, in create_connection
+    sock.connect(sa)
+OSError: [WinError 10051] A socket operation was attempted to an unreachable network
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x0000015BCF686148>: Failed to establish a new connection: [WinError 10051] A socket operation was attempted to an unreachable network
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\urllib3\util\retry.py", line 399, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/home_timeline.json?max_id=1493325060660158468&include_rts=True&since_id=1493248935045079043&include_entities=False&tweet_mode=extended&count=200 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000015BCF686148>: Failed to establish a new connection: [WinError 10051] A socket operation was attempted to an unreachable network'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 189, in execute
+    proxies=self.api.proxy)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/home_timeline.json?max_id=1493325060660158468&include_rts=True&since_id=1493248935045079043&include_entities=False&tweet_mode=extended&count=200 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000015BCF686148>: Failed to establish a new connection: [WinError 10051] A socket operation was attempted to an unreachable network'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:/Users/Aseta/Desktop/D S/ML_AI/Twitter app/KenyaNLP/TweetCollection/TweetRetriever.py", line 52, in main
+    make_csv.GetTweetsAndReplies(api)
+  File "c:\Users\Aseta\Desktop\D S\ML_AI\Twitter app\KenyaNLP\TweetCollection\GetTweets.py", line 43, in GetTweetsAndReplies
+    for tweet in self.tweet_cursor.items():
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\cursor.py", line 47, in __next__
+    return self.next()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\cursor.py", line 195, in next
+    self.current_page = self.page_iterator.next()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\cursor.py", line 106, in next
+    data = self.method(max_id=self.max_id, parser=RawParser(), *self.args, **self.kargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 250, in _call
+    return method.execute()
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 191, in execute
+    six.reraise(TweepError, TweepError('Failed to send request: %s' % e), sys.exc_info()[2])
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\six.py", line 692, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\tweepy\binder.py", line 189, in execute
+    proxies=self.api.proxy)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Aseta\Anaconda3\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+tweepy.error.TweepError: Failed to send request: HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /1.1/statuses/home_timeline.json?max_id=1493325060660158468&include_rts=True&since_id=1493248935045079043&include_entities=False&tweet_mode=extended&count=200 (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x0000015BCF686148>: Failed to establish a new connection: [WinError 10051] A socket operation was attempted to an unreachable network'))
+15-Feb-22 10:35:02 - TweetRetrieval - INFO - Number of entries added before the Error above: 17055
+15-Feb-22 10:35:02 - TweetRetrieval - INFO - ID of last retrieved tweet before the Error above: 1493325099449073665

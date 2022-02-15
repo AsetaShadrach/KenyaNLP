@@ -28,8 +28,11 @@ punctuations  = [p for p in string.punctuation]
 # e.g lowercase letters
 all_items = l_letters + u_letters + punctuations + numbers
 
+ref_init_dict[None] = 0 # Allow for filling to fit length
+
 for ind, item in enumerate(all_items):
-    ref_init_dict[item] = ind
+    # +1 to allow as to use zero to fill in lengths
+    ref_init_dict[item] = ind+1
 
 with open(path_to_json_converter,'w') as f:
     json.dump(ref_init_dict,f,indent=4)
@@ -57,13 +60,15 @@ def convert_to_numb(s):
             for item in l:
                 if item not in dict_data:
                     value += 1
-                    dict_data.update({item:value})
+                    dict_data[item] = value
 
             file.seek(0)
             ref_dict = dict_data
             json.dump(ref_dict, file,indent=4)
         
             result = list(map(ref_dict.get,l))
+        
+    result  = result + [0]*(140 - len(result))
 
     return result
 

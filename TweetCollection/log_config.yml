@@ -13,11 +13,7 @@ handlers:
     () : logfileConfig.logmaker
     formatter: default
 loggers:
-  TweetRetreival:
-    level: DEBUG
-    handlers: [file]
-    propagate: no
-  KeywordRetrieval:
+  TweetRetrieval:
     level: DEBUG
     handlers: [file]
     propagate: no

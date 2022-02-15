@@ -5,7 +5,7 @@ from GetTweets import CreateTweetsCsv, tweepy
 def main(api_key, api_secret, access_token, access_token_secret,
          tweets_csv_file_path=None, list_of_keywords=None, to_run='tweet'):
 
-    logger = logfileConfig.mk_log('KeywordRetrieval')
+    logger = logfileConfig.mk_log('TweetRetrieval')
     last_id_logged = logfileConfig.get_last_tweet_id("process.log",logger)
     make_csv = None
 
@@ -41,6 +41,7 @@ def main(api_key, api_secret, access_token, access_token_secret,
                                          include_rts=True,
                                          since_id=last_id_logged,
                                          include_entities=False,
+                                         tweet_mode='extended',
                                          count=200)
 
             make_csv = CreateTweetsCsv(tweets_csv_file_path,
@@ -72,8 +73,13 @@ if __name__ == '__main__':
 
     api_key = ""
     api_secret = ""
+    
+    access_token = "2516700309-YpB2TBNJEisnbPh4PpwMIajcN1pL5GANmmIvskS"
+    access_token_secret = "YChK9NtBwCrC8CZAWp4VM9FXRKxzHCxM0sf5O0VKzENLK"
 
-
+    api_key = "c1tcgUSXhbVIHguXVWXvEJG0s"
+    api_secret = "W5D3mimyQM7IQyIiGPxKCtAUIOtsh9pJ4Ufj5HxijReUppQmOX"
+    
     to_run = 'keyword'
 
     tweets_csv_file_path = "c:/Users/Aseta/Desktop/D S/ML_AI/Twitter app/TweetsAndReplies.csv"

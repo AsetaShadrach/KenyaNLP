@@ -59,7 +59,8 @@ class CreateTweetsCsv():
                     try:
                         for reply in replies:
                             if reply.in_reply_to_status_id==tweet.id:
-                                tweet_text = pattern.sub('', tweet.text)
+                                # use full_text instead of text because of tweet mode extend
+                                tweet_text = pattern.sub('', tweet.full_text)
                             else:
                                 if reply.in_reply_to_status_id != None:
                                 # Find the original tweets for the replies without
