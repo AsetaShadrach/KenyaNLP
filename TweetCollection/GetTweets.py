@@ -88,6 +88,7 @@ class CreateTweetsCsv():
 
                     except tweepy.error.TweepError as er:
                         # Log the specific errors if need be
+                        self.logger.error("TWEEPY ERROR: ",er)
                         continue
                     
                     except Exception as e:

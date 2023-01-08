@@ -67,24 +67,25 @@ def main(api_key, api_secret, access_token, access_token_secret,
 
 if __name__ == '__main__':
 
-
     access_token = ""
     access_token_secret = ""
-
     api_key = ""
     api_secret = ""
     
-    to_run = 'keyword'
-
     tweets_csv_file_path = "c:/Users/Aseta/Desktop/D S/ML_AI/Twitter app/TweetsAndReplies.csv"
 
-    list_of_keywords = ['njaanuary', 'expressway', 'construction', 'mejja', 'masculinitysaturday']
-    
 
     # for keywords
     '''
+    to_run = 'keyword'
+
+    list_of_keywords = ['njaanuary', 'expressway', 'construction', 'mejja', 'masculinitysaturday']
+
     main(api_key, api_secret, access_token, access_token_secret,
-         list_of_keywords=list_of_keywords, to_run=to_run)'''
+         list_of_keywords=list_of_keywords, to_run=to_run)
+    
+    '''
+
 
     # for general tweets
     main(api_key, api_secret, access_token, access_token_secret,
